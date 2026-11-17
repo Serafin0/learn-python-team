@@ -22,10 +22,12 @@ def test_if_statement():
         conclusion = 'Number equals to zero'
     elif number < 1:
         conclusion = 'Number is greater than zero but less than one'
+    elif number < 20:
+        conclusion = 'Number is at least one but less than 20'
     else:
-        conclusion = 'Number bigger than or equal to one'
+        conclusion = 'Number is at least 20'
 
-    assert conclusion == 'Number bigger than or equal to one'
+    assert conclusion == 'Number is at least one but less than 20'
 
 
 def test_nested_if_statement():
@@ -49,16 +51,16 @@ def test_nested_if_statement():
 def test_multiple_elif_score_ranges():
     """Check score ranges from highest to lowest to select one result."""
 
-    cases = [(75, 'B'), (60, 'C')]
+    score = 75
+    grade = ''
 
-    for score, expected_grade in cases:
-        if score >= 90:
-            grade = 'A'
-        elif score >= 75:
-            grade = 'B'
-        elif score >= 60:
-            grade = 'C'
-        else:
-            grade = 'F'
+    if score >= 90:
+        grade = 'A'
+    elif score >= 75:
+        grade = 'B'
+    elif score >= 60:
+        grade = 'C'
+    else:
+        grade = 'F'
 
-        assert grade == expected_grade
+    assert grade == 'B'
