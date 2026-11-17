@@ -49,16 +49,16 @@ def test_nested_if_statement():
 def test_multiple_elif_score_ranges():
     """Check score ranges from highest to lowest to select one result."""
 
-    score = 75
-    grade = ''
+    cases = [(75, 'B'), (60, 'C')]
 
-    if score >= 90:
-        grade = 'A'
-    elif score >= 75:
-        grade = 'B'
-    elif score >= 60:
-        grade = 'C'
-    else:
-        grade = 'F'
+    for score, expected_grade in cases:
+        if score >= 90:
+            grade = 'A'
+        elif score >= 75:
+            grade = 'B'
+        elif score >= 60:
+            grade = 'C'
+        else:
+            grade = 'F'
 
-    assert grade == 'B'
+        assert grade == expected_grade
