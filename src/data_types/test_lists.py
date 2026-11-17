@@ -81,9 +81,10 @@ def test_list_methods():
     fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
 
     # list.append(x)
-    # Add an item to the end of the list.
+    # Add an item to the end of the list. The list grows by exactly one item.
     # Equivalent to a[len(a):] = [x].
     fruits.append('grape')
+    assert len(fruits) == 8
     assert fruits == ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana', 'grape']
 
     # list.remove(x)
