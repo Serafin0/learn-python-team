@@ -22,10 +22,12 @@ def test_if_statement():
         conclusion = 'Number equals to zero'
     elif number < 1:
         conclusion = 'Number is greater than zero but less than one'
+    elif number < 20:
+        conclusion = 'Number is at least one but less than 20'
     else:
-        conclusion = 'Number bigger than or equal to one'
+        conclusion = 'Number is at least 20'
 
-    assert conclusion == 'Number bigger than or equal to one'
+    assert conclusion == 'Number is at least one but less than 20'
 
 
 def test_nested_if_statement():
