@@ -242,3 +242,5 @@ flake8 ./src --statistics --show-source --count
 ## Author
 
 - [@trekhleb](https://trekhleb.dev)
+
+Release: v1.0.0 is the final integrated version of this project.
